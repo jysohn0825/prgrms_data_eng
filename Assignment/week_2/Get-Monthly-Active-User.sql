@@ -5,10 +5,10 @@ SELECT
   to_char(st.ts, 'YYYY-MM') as Monthly,
   count(DISTINCT usc.userid) as ActiveUser
 FROM
-  raw_data.session_timestamp st
-  JOIN raw_data.user_session_channel usc 
+  raw_data.session_timestamp as st
+  JOIN raw_data.user_session_channel as usc 
     ON st.sessionid = usc.sessionid
 GROUP BY 
-  to_char(st.ts, 'YYYY-MM')
+  1         // select의 첫번째 인자를 기준으로 group by
 ORDER BY
   1
