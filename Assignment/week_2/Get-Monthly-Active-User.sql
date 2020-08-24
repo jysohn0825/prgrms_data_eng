@@ -9,6 +9,6 @@ FROM
   JOIN raw_data.user_session_channel as usc 
     ON st.sessionid = usc.sessionid
 GROUP BY 
-  1         // select의 첫번째 인자를 기준으로 group by
+  1         /* select의 첫번째 인자를 기준으로 group by, order by */
 ORDER BY
   1
