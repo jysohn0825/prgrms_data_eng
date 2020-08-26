@@ -2,7 +2,7 @@
 -- 매달 Active 한 사용자 선별하는 
 *********************************************************/
 SELECT
-  to_char(st.ts, 'YYYY-MM') as Monthly,
+  to_char(st.ts, 'YYYY-MM') as Monthly, /*LEFT(ts, 7) or DATE_TRUNC(‘month’, ts)*/
   count(DISTINCT usc.userid) as ActiveUser
 FROM
   raw_data.session_timestamp as st
