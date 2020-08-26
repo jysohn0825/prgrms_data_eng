@@ -45,4 +45,4 @@ import pandas.io.sql as sqlio
 
 df = sqlio.read_sql_query(sql,conn)
 
-df.head()
+df.head() 
