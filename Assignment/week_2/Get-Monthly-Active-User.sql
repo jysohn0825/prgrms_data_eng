@@ -3,9 +3,7 @@
 *********************************************************/
 SELECT
   
-  /*LEFT(ts, 7) or DATE_TRUNC(‘month’, ts
-    date_trunc는 timestamp를 리턴 to_char는 string 리턴
-  */
+  /* LEFT(ts, 7) or DATE_TRUNC(‘month’, ts) 와 같은 의미이고 DATE_TRUNC는 timestamp, to_char는 string 리턴 */
   to_char(st.ts, 'YYYY-MM') as Monthly, 
   count(DISTINCT usc.userid) as ActiveUser
 FROM
